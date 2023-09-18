@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+	--primary: hsl(178, 100%, 50%);
+	--text: hsl(215, 51%, 70%);
+
+	--background-page: hsl(217, 54%, 11%);
+	--background-card: hsl(216, 50%, 16%);
+	--background-accent: hsl(215, 32%, 27%);
+	--text-emphasis: hsl(0, 0%, 100%);
+
+	font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: transparent;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	background-color: var(--background-page);
+	color: var(--text);
+}
