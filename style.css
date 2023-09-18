@@ -51,6 +51,7 @@ body {
 }
 .nft:hover {
 	position: relative;
+	cursor: pointer;
 }
 .nft:hover::after {
 	content: '';
@@ -81,6 +82,7 @@ h1 {
 }
 h1:hover {
 	color: var(--primary);
+	cursor: pointer;
 }
 .about {
 	font-size: 1.125rem;
@@ -114,7 +116,8 @@ h1:hover {
 }
 
 hr {
-	color: var(--background-accent);
+	background-color: var(--background-accent);
+	height: 1px;
 }
 
 .creator {
@@ -136,4 +139,13 @@ hr {
 }
 .creator em:hover {
 	color: var(--primary);
+	cursor: pointer;
+}
+
+@media (orientation: portrait) {
+	.card {
+		margin: 4rem 1.5rem;
+		width: 100%;
+		aspect-ratio: 327 / 539;
+	}
 }
