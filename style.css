@@ -7,8 +7,6 @@
 	--background-card: hsl(216, 50%, 16%);
 	--background-accent: hsl(215, 32%, 27%);
 	--text-emphasis: hsl(0, 0%, 100%);
-
-	font-size: 18px;
 }
 
 *,
@@ -25,4 +23,117 @@ body {
 	font-family: 'Outfit', sans-serif;
 	background-color: var(--background-page);
 	color: var(--text);
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	background-color: var(--background-card);
+	aspect-ratio: 349 / 596;
+	width: clamp(256px, 24.23%, 430px);
+	border-radius: 1.125rem;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 4%;
+	box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.15);
+}
+
+.nft > img {
+	width: 100%;
+	border-radius: 0.5625rem;
+}
+.nft > span {
+	display: none;
+}
+.nft:hover {
+	position: relative;
+}
+.nft:hover::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 0.5625rem;
+	background-color: var(--primary);
+	opacity: 50%;
+	z-index: 1;
+}
+.nft:hover > span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: grid;
+	place-items: center;
+	z-index: 2;
+}
+
+h1 {
+	color: var(--text-emphasis);
+	font-size: 1.4rem;
+	font-weight: 400;
+	transition: 0.3s;
+}
+h1:hover {
+	color: var(--primary);
+}
+.about {
+	font-size: 1.125rem;
+	font-weight: 300;
+	line-height: 140%;
+}
+
+.information {
+	display: grid;
+	margin-top: 5px;
+	grid-template-columns: 1fr 1fr;
+}
+.information > div {
+	display: flex;
+	gap: 6px;
+}
+.price > img {
+	height: 85%;
+	aspect-ratio: 11 / 18;
+}
+.price > p {
+	font-weight: 400;
+	color: var(--primary);
+}
+.remaining-rime {
+	margin-left: auto;
+}
+.remaining-rime > img {
+	height: 100%;
+	aspect-ratio: 1 / 1;
+}
+
+hr {
+	color: var(--background-accent);
+}
+
+.creator {
+	display: flex;
+	height: 2rem;
+	font-weight: 300;
+	align-items: center;
+	gap: 17px;
+}
+.creator > img {
+	height: 100%;
+	border: 1px solid var(--text-emphasis);
+	border-radius: 50%;
+}
+.creator em {
+	color: var(--text-emphasis);
+	font-style: normal;
+	transition: 0.3s;
+}
+.creator em:hover {
+	color: var(--primary);
 }
